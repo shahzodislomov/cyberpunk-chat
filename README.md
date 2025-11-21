@@ -21,6 +21,16 @@ Use pnpm for the package manager.
 
 This project is set up already and running on a cloud environment, as well as a convex development in the sandbox.
 
+## Local Development
+
+To run this project locally on your machine, follow these steps:
+
+1.  **Prerequisites**:
+    - Node.js (v18 or higher recommended)
+    - pnpm (recommended) or npm
+
+2.  **Install Dependencies**:
+    
 ## Environment Variables
 
 The project is set up with project specific CONVEX_DEPLOYMENT and VITE_CONVEX_URL environment variables on the client side.

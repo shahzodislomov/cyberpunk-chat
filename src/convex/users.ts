@@ -19,6 +19,9 @@ export const currentUser = query({
   },
 });
 
+// Alias for blueprint compatibility
+export const current = currentUser;
+
 /**
  * Use this function internally to get the current user data. Remember to handle the null user case.
  * @param ctx

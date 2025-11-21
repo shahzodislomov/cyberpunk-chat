@@ -32,12 +32,19 @@ const schema = defineSchema(
       role: v.optional(roleValidator), // role of the user. do not remove
     }).index("email", ["email"]), // index for the email. do not remove or modify
 
-    // add other tables here
+    channels: defineTable({
+      name: v.string(),
+      description: v.optional(v.string()),
+      createdBy: v.union(v.id("users"), v.string()),
+    }),
 
-    // tableName: defineTable({
-    //   ...
-    //   // table fields
-    // }).index("by_field", ["field"])
+    messages: defineTable({
+      channelId: v.id("channels"),
+      userId: v.id("users"),
+      content: v.string(),
+      userName: v.string(),
+      userImage: v.optional(v.string()),
+    }).index("by_channel", ["channelId"]),
   },
   {
     schemaValidation: false,

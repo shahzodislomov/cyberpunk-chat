@@ -1,0 +1,2 @@
+    npx convex dashboard
+    
